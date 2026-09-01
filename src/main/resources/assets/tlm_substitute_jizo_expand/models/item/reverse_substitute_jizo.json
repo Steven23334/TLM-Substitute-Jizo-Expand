@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+      "layer0": "tlm_substitute_jizo_expand:item/reverse_substitute_jizo"
+    }
+  }

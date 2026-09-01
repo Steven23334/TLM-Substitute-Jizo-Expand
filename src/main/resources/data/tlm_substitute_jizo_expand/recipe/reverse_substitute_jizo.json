@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "result": {
+    "id": "tlm_substitute_jizo_expand:reverse_substitute_jizo",
+    "count": 1
+  },
+  "ingredients": [
+    {
+      "item": "tlm_substitute_jizo_expand:substitute_jizo"
+    }
+  ]
+}

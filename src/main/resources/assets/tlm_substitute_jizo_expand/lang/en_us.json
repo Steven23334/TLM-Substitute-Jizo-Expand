@@ -1,0 +1,7 @@
+{
+  "item.tlm_substitute_jizo_expand.substitute_jizo": "Repeated Substitute Jizo",
+  "item.tlm_substitute_jizo_expand.reverse_substitute_jizo": "Reverse Substitute Jizo",
+  "tooltips.tlm_substitute_jizo_expand.substitute_jizo.desc": "Makes the maid invulnerable",
+  "tooltips.tlm_substitute_jizo_expand.reverse_substitute_jizo.desc": "Removes the maid's invulnerability",
+  "item_group.tlm_substitute_jizo_expand": "TLM Substitute Jizo Expand"
+}

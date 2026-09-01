@@ -1,0 +1,21 @@
+{
+  "category": "misc",
+  "result": {
+    "id": "tlm_substitute_jizo_expand:substitute_jizo",
+    "count": 1
+  },
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "type": "crafting_shaped",
+  "key": {
+    "a": {
+      "item": "diamond"
+    },
+    "b": {
+      "item": "touhou_little_maid:substitute_jizo"
+    }
+  }
+}

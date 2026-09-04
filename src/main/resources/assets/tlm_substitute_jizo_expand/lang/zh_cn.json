@@ -1,7 +1,8 @@
 {
   "item.tlm_substitute_jizo_expand.substitute_jizo": "多次性替身地藏",
-  "item.tlm_substitute_jizo_expand.reverse_substitute_jizo": "反替身地藏",
+  "item.tlm_substitute_jizo_expand.reverse_substitute_jizo": "多次性反替身地藏",
   "tooltips.tlm_substitute_jizo_expand.substitute_jizo.desc": "使女仆获得无敌状态",
   "tooltips.tlm_substitute_jizo_expand.reverse_substitute_jizo.desc": "移除女仆的无敌状态",
-  "item_group.tlm_substitute_jizo_expand": "TLM替身地藏扩展"
+  "item_group.tlm_substitute_jizo_expand": "TLM替身地藏扩展",
+  "item.tlm_substitute_jizo_expand.one_time_reverse_substitute_jizo": "一次性反替身地藏"
 }

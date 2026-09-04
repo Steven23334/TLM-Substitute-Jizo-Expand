@@ -1,6 +1,6 @@
 package com.steven23334.tlm_substitute_jizo_expand.item;
 
-import com.steven23334.tlm_substitute_jizo_expand.init.ModItems; // 新增导入
+import com.steven23334.tlm_substitute_jizo_expand.init.ModItems;
 import com.github.tartaricacid.touhoulittlemaid.api.event.InteractMaidEvent;
 import com.github.tartaricacid.touhoulittlemaid.entity.passive.EntityMaid;
 import net.minecraft.ChatFormatting;
@@ -19,8 +19,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.List;
 
-// 删除 import com.github.tartaricacid.touhoulittlemaid.init.InitItems;
-
 @EventBusSubscriber
 public class ReverseSubstituteJizo extends Item {
     public ReverseSubstituteJizo() {
@@ -32,13 +30,20 @@ public class ReverseSubstituteJizo extends Item {
         EntityMaid maid = event.getMaid();
         ItemStack stack = event.getStack();
         Player player = event.getPlayer();
-        // 改用 ModItems 中的常量
+
         if (maid.isOwnedBy(player) && stack.getItem() == ModItems.REVERSE_SUBSTITUTE_JIZO.get() && maid.getIsInvulnerable()) {
             maid.setEntityInvulnerable(false);
             player.getCooldowns().addCooldown(stack.getItem(), 40);
+            // ====== 修改：直接不消耗，移除配置判断 ======
             stack.shrink(0);
             event.setCanceled(true);
         }
+    }
+
+    @Override
+    @Nonnull
+    public Component getName(@Nonnull ItemStack stack) {
+        return Component.translatable("item.tlm_substitute_jizo_expand.reverse_substitute_jizo");
     }
 
     @Override

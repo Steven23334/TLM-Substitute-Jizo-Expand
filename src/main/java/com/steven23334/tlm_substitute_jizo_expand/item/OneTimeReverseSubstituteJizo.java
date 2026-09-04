@@ -1,8 +1,8 @@
 package com.steven23334.tlm_substitute_jizo_expand.item;
 
-import com.steven23334.tlm_substitute_jizo_expand.init.ModItems;
 import com.github.tartaricacid.touhoulittlemaid.api.event.InteractMaidEvent;
 import com.github.tartaricacid.touhoulittlemaid.entity.passive.EntityMaid;
+import com.steven23334.tlm_substitute_jizo_expand.init.ModItems;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Player;
@@ -20,8 +20,8 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 @EventBusSubscriber
-public class SubstituteJizo extends Item {
-    public SubstituteJizo() {
+public class OneTimeReverseSubstituteJizo extends Item {
+    public OneTimeReverseSubstituteJizo() {
         super((new Properties()).stacksTo(1).rarity(Rarity.EPIC));
     }
 
@@ -31,11 +31,10 @@ public class SubstituteJizo extends Item {
         ItemStack stack = event.getStack();
         Player player = event.getPlayer();
 
-        if (maid.isOwnedBy(player) && stack.getItem() == ModItems.SUBSTITUTE_JIZO.get() && !maid.getIsInvulnerable()) {
-            maid.setEntityInvulnerable(true);
+        if (maid.isOwnedBy(player) && stack.getItem() == ModItems.ONE_TIME_REVERSE_SUBSTITUTE_JIZO.get() && maid.getIsInvulnerable()) {
+            maid.setEntityInvulnerable(false);
             player.getCooldowns().addCooldown(stack.getItem(), 40);
-            // ====== 修改：直接不消耗，移除配置判断 ======
-            stack.shrink(0);
+            stack.shrink(1);
             event.setCanceled(true);
         }
     }
@@ -43,7 +42,7 @@ public class SubstituteJizo extends Item {
     @Override
     @Nonnull
     public Component getName(@Nonnull ItemStack stack) {
-        return Component.translatable("item.tlm_substitute_jizo_expand.substitute_jizo");
+        return Component.translatable("item.tlm_substitute_jizo_expand.one_time_reverse_substitute_jizo");
     }
 
     @Override
@@ -52,7 +51,8 @@ public class SubstituteJizo extends Item {
                                 @Nullable TooltipContext worldIn,
                                 @Nonnull List<Component> tooltip,
                                 @Nonnull TooltipFlag flagIn) {
-        tooltip.add(Component.translatable("tooltips.tlm_substitute_jizo_expand.substitute_jizo.desc")
+        // ====== 使用独立的描述键 ======
+        tooltip.add(Component.translatable("tooltips.tlm_substitute_jizo_expand.reverse_substitute_jizo.desc")
                 .withStyle(ChatFormatting.GRAY));
     }
 

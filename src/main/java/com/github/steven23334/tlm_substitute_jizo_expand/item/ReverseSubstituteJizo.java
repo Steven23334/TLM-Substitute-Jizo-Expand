@@ -1,6 +1,6 @@
-package com.steven23334.tlm_substitute_jizo_expand.item;
+package com.github.steven23334.tlm_substitute_jizo_expand.item;
 
-import com.steven23334.tlm_substitute_jizo_expand.init.ModItems;
+import com.github.steven23334.tlm_substitute_jizo_expand.init.ModItems;
 import com.github.tartaricacid.touhoulittlemaid.api.event.InteractMaidEvent;
 import com.github.tartaricacid.touhoulittlemaid.entity.passive.EntityMaid;
 import net.minecraft.ChatFormatting;

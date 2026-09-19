@@ -1,9 +1,9 @@
-package com.steven23334.tlm_substitute_jizo_expand.init;
+package com.github.steven23334.tlm_substitute_jizo_expand.init;
 
-import com.steven23334.tlm_substitute_jizo_expand.TlmSubstituteJizoExpand;
-import com.steven23334.tlm_substitute_jizo_expand.item.ReverseSubstituteJizo;
-import com.steven23334.tlm_substitute_jizo_expand.item.SubstituteJizo;
-import com.steven23334.tlm_substitute_jizo_expand.item.OneTimeReverseSubstituteJizo;
+import com.github.steven23334.tlm_substitute_jizo_expand.TlmSubstituteJizoExpand;
+import com.github.steven23334.tlm_substitute_jizo_expand.item.ReverseSubstituteJizo;
+import com.github.steven23334.tlm_substitute_jizo_expand.item.SubstituteJizo;
+import com.github.steven23334.tlm_substitute_jizo_expand.item.OneTimeReverseSubstituteJizo;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;

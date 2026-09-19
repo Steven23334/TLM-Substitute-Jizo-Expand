@@ -1,6 +1,6 @@
-package com.steven23334.tlm_substitute_jizo_expand;
+package com.github.steven23334.tlm_substitute_jizo_expand;
 
-import com.steven23334.tlm_substitute_jizo_expand.init.ModItems;
+import com.github.steven23334.tlm_substitute_jizo_expand.init.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
